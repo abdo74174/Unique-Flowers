@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="light" lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>الدفع | المتجر الرقمي للزهور</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7b5556",
+              "primary-dim": "#6e494a",
+              "primary-container": "#f7c5c5",
+              "on-primary": "#fff7f6",
+              "secondary": "#56634f",
+              "secondary-container": "#d9e7ce",
+              "on-secondary": "#effee4",
+              "surface": "#faf9f6",
+              "on-surface": "#303330",
+              "on-surface-variant": "#5d605c",
+              "outline-variant": "#b0b3ae",
+              "background": "#faf9f6",
+            },
+            fontFamily: {
+              "headline": ["Amiri", "serif"],
+              "body": ["Alexandria", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        body { font-family: 'Alexandria', sans-serif; }
+        .font-serif { font-family: 'Amiri', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(48,51,48,0.06)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a href="HomePage.html" class="text-2xl font-serif italic text-[#7b5556] dark:text-[#f7c5c5] hover:scale-105 transition-transform duration-300">المتجر الرقمي للزهور</a>
+<div class="hidden md:flex gap-8 items-center space-x-reverse space-x-8 font-serif italic text-lg tracking-tight">
+<a class="text-[#303330] dark:text-[#eeeeea] hover:text-[#7b5556] hover:scale-105 transition-transform duration-300" href="HomePage.html">الرئيسية</a>
+<a class="text-[#303330] dark:text-[#eeeeea] hover:text-[#7b5556] hover:scale-105 transition-transform duration-300" href="CategoryPage.html">الأقسام</a>
+<a class="text-[#303330] dark:text-[#eeeeea] hover:text-[#7b5556] hover:scale-105 transition-transform duration-300" href="HomePage.html#footer">اتصل بنا</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#7b5556] cursor-pointer hover:scale-105 transition-transform duration-300">search</span>
+<div onclick="window.location.href='CartPage.html'" class="relative">
+<span class="material-symbols-outlined text-[#7b5556] cursor-pointer hover:scale-105 transition-transform duration-300">shopping_cart</span>
+<span class="absolute -top-2 -left-2 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center cursor-pointer">2</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="flex-1">
+<div class="mb-12">
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center text-xs font-bold">1</span>
+<span class="text-xs uppercase tracking-widest text-secondary font-semibold">السلة</span>
+</div>
+<div class="h-px w-8 bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs font-bold">2</span>
+<span class="text-xs uppercase tracking-widest text-primary font-bold">الشحن</span>
+</div>
+<div class="h-px w-8 bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold">3</span>
+<span class="text-xs uppercase tracking-widest text-on-surface-variant/60 font-semibold">الدفع</span>
+</div>
+</div>
+<h1 class="font-serif text-5xl md:text-6xl text-primary leading-tight mb-2">تفاصيل التوصيل</h1>
+<p class="text-on-surface-variant font-body">أين تريدنا أن نرسل زهور الموسم؟</p>
+</div>
+<form class="space-y-12">
+<section>
+<h2 class="text-xs uppercase tracking-[0.2em] text-outline mb-6">معلومات المستلم</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface/70 mr-1">الاسم الكامل</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="مثال: نورة العتيبي" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface/70 mr-1">رقم الجوال</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="+966 5X XXX XXXX" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-xs font-bold text-on-surface/70 mr-1">عنوان الشحن</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="اسم الشارع، رقم المنزل، الحي..." rows="3"></textarea>
+</div>
+</div>
+</section>
+<section class="p-8 rounded-2xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(48,51,48,0.06)] border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<h2 class="text-lg font-serif italic text-primary">تحقق من طلبك</h2>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">لقد أرسلنا رمزاً مكوناً من 6 أرقام إلى هاتفك لضمان معاملة آمنة.</p>
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="flex gap-2" dir="ltr">
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+<input class="w-12 h-14 text-center text-xl font-bold bg-surface-container border-none rounded-lg focus:ring-2 focus:ring-primary focus:bg-white transition-all" maxlength="1" type="text"/>
+</div>
+<button class="text-xs uppercase tracking-widest text-primary font-bold hover:underline" type="button">إعادة إرسال الرمز</button>
+</div>
+</section>
+</form>
+</div>
+<aside class="w-full md:w-[400px]">
+<div class="sticky top-32 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-3xl overflow-hidden relative">
+<div class="absolute -top-12 -left-12 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl"></div>
+<h3 class="font-serif text-2xl text-primary mb-8">ملخص الطلب</h3>
+<div class="space-y-6 mb-8">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" style="background-image: url('https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=200')"></div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">باقة حديقة الروز</p>
+<p class="text-xs text-on-surface-variant">باقة مربوطة يدوياً</p>
+</div>
+<p class="text-sm font-medium">84.00 ر.س</p>
+</div>
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center shrink-0" style="background-image: url('https://images.unsplash.com/photo-1561181286-d3973697964a?auto=format&fit=crop&q=80&w=200')"></div>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">شمعة الياسمين</p>
+<p class="text-xs text-on-surface-variant">عطرنا المميز</p>
+</div>
+<p class="text-sm font-medium">32.00 ر.س</p>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 pt-6 space-y-4">
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>المجموع الفرعي</span>
+<span>116.00 ر.س</span>
+</div>
+<div class="flex justify-between text-sm text-on-surface-variant">
+<span>الشحن</span>
+<span class="text-secondary font-medium">مجاني</span>
+</div>
+<div class="flex justify-between text-xl font-serif text-primary pt-2">
+<span>الإجمالي</span>
+<span>116.00 ر.س</span>
+</div>
+</div>
+<button onclick="window.location.href='OrderConfirmationPage.html'" class="w-full mt-10 bg-gradient-to-r from-primary to-primary-dim text-on-primary py-5 rounded-full font-bold tracking-widest uppercase text-xs shadow-lg hover:scale-[1.02] transition-all duration-300 active:scale-95">
+                            إتمام الطلب
+                        </button>
+<div class="mt-8 flex justify-center gap-6 opacity-60">
+<span class="material-symbols-outlined text-xl">shield</span>
+<span class="material-symbols-outlined text-xl">lock</span>
+<span class="material-symbols-outlined text-xl">credit_card</span>
+</div>
+</div>
+<div class="px-4 text-center">
+<p class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest leading-relaxed">
+                            كل باقة منسقة بزهور عضوية وموسمية.<br/>
+                            دفع آمن مدعوم بـ FloristPay™ SSL.
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<footer class="bg-[#f4f4f0] dark:bg-stone-950 w-full py-12 px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="font-serif italic text-xl text-[#7b5556] mb-4">المتجر الرقمي للزهور</div>
+<p class="font-sans text-xs tracking-tight text-[#56634f] opacity-70 leading-relaxed">
+                    نجلب رومانسية الحديقة البرية إلى عتبة داركم الرقمية.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] uppercase tracking-widest text-[#56634f] font-bold mb-2">تسوق</span>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">العناية بالزهور</a>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">سياسة الشحن</a>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">الاشتراكات</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] uppercase tracking-widest text-[#56634f] font-bold mb-2">الشركة</span>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">من نحن</a>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="HomePage.html#footer">اتصل بنا</a>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">الخصوصية</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-[10px] uppercase tracking-widest text-[#56634f] font-bold mb-2">تواصل</span>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">انستغرام</a>
+<a class="opacity-70 hover:opacity-100 transition-opacity font-sans text-xs" href="#">بنتريست</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10">
+<p class="font-sans text-[10px] tracking-tight text-[#56634f] text-center">© 2024 المتجر الرقمي للزهور. صُنع بكل حب.</p>
+</div>
+</footer>
+</body></html>

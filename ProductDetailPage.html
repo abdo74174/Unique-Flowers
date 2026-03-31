@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="light" lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>باقة مخمل الرومانسية - المتجر الرقمي للزهور</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#7b5556",
+              "primary-dim": "#6e494a",
+              "primary-container": "#f7c5c5",
+              "on-primary": "#fff7f6",
+              "secondary": "#56634f",
+              "secondary-container": "#d9e7ce",
+              "on-secondary": "#effee4",
+              "surface": "#faf9f6",
+              "on-surface": "#303330",
+              "on-surface-variant": "#5d605c",
+              "outline-variant": "#b0b3ae",
+              "background": "#faf9f6",
+            },
+            fontFamily: {
+              "headline": ["Amiri", "serif"],
+              "body": ["Alexandria", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Alexandria', sans-serif; }
+        h1, h2, h3, .serif-font { font-family: 'Amiri', serif; }
+        .smooth-300ms-scale-102:hover { transform: scale(1.02); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(48,51,48,0.06)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="HomePage.html" class="text-2xl font-serif italic text-[#7b5556] dark:text-[#f7c5c5] hover:scale-105 transition-transform duration-300">
+                المتجر الرقمي للزهور
+            </a>
+            <div class="hidden md:flex space-x-12 space-x-reverse font-serif italic text-lg tracking-tight">
+                <a href="HomePage.html" class="text-[#303330] dark:text-[#eeeeea] hover:text-[#7b5556] hover:scale-105 transition-transform duration-300">الرئيسية</a>
+                <a href="CategoryPage.html" class="text-[#7b5556] dark:text-[#f7c5c5] font-semibold border-b-2 border-[#7b5556] pb-1 hover:scale-105 transition-transform duration-300">الأقسام</a>
+                <a href="HomePage.html#footer" class="text-[#303330] dark:text-[#eeeeea] hover:text-[#7b5556] hover:scale-105 transition-transform duration-300">اتصل بنا</a>
+            </div>
+            <div class="flex items-center space-x-6 space-x-reverse text-[#7b5556] dark:text-[#f7c5c5]">
+                <button class="hover:scale-105 transition-transform duration-300">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+                <button onclick="window.location.href='CartPage.html'" class="hover:scale-105 transition-transform duration-300 relative">
+                    <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                    <span class="absolute -top-2 -left-2 bg-primary text-on-primary text-[10px] rounded-full w-4 h-4 flex items-center justify-center">1</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-20">
+            
+            <!-- Gallery Section -->
+            <div class="lg:col-span-7 grid grid-cols-12 gap-4">
+                <div class="col-span-12 md:col-span-10 order-1 md:order-1">
+                    <div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=1200" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Vertical Thumbnails -->
+                <div class="col-span-12 md:col-span-2 order-2 md:order-2 flex md:flex-col gap-4">
+                    <div class="flex-1 aspect-square bg-surface-container rounded-lg overflow-hidden border-2 border-primary cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=200" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 aspect-square bg-surface-container rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=200" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 aspect-square bg-surface-container rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                        <img src="https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&q=80&w=200" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="hidden md:block flex-1 aspect-square bg-surface-container rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+                        <img src="https://images.unsplash.com/photo-1561181286-d3973697964a?auto=format&fit=crop&q=80&w=200" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Section -->
+            <div class="lg:col-span-5 flex flex-col">
+                <div class="mb-8">
+                    <span class="text-secondary font-label uppercase tracking-widest text-[10px] mb-2 block">المجموعة الفاخرة</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl text-on-surface mb-4 leading-tight font-headline italic">
+                        باقة مخمل الرومانسية
+                    </h1>
+                    <p class="text-2xl text-primary font-body font-light">65.00 ر.س</p>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-10 space-y-6">
+                    <p class="text-on-surface-variant font-body leading-relaxed text-lg font-light">
+                        تنسيق شعري صُمم ليلتقط الجمال العابر لشروق الشمس. يتميز بالفاوانيا الشبيهة بالسحب، والرانوكولوس المختار يدوياً، والأوكالبتوس الفضي، هذه الباقة هي همس من المودة في شكل نباتي.
+                    </p>
+                    <div class="bg-surface-container-low p-6 rounded-xl space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-base">local_florist</span>
+                            <span class="text-sm font-label text-on-surface-variant">مقصوصة طازجة ومربوطة يدوياً يومياً</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+                            <span class="text-sm font-label text-on-surface-variant">تتضمن مادة الحفاظ على الزهور الخاصة بنا</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selectors & Actions -->
+                <div class="mt-auto space-y-6">
+                    <!-- Quantity -->
+                    <div class="flex items-center gap-6">
+                        <span class="font-label text-sm uppercase tracking-wider text-outline">الكمية</span>
+                        <div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+                            <button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded-full transition-colors">
+                                <span class="material-symbols-outlined text-sm">remove</span>
+                            </button>
+                            <span class="w-10 text-center font-medium">1</span>
+                            <button class="w-8 h-8 flex items-center justify-center hover:bg-surface-container-highest rounded-full transition-colors">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button onclick="window.location.href='CartPage.html'" class="flex-1 py-4 px-8 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-label font-semibold shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-300">
+                            أضف إلى السلة
+                        </button>
+                        <button class="flex items-center justify-center gap-2 py-4 px-8 rounded-full border border-outline-variant hover:bg-secondary-container/30 text-secondary font-label font-semibold transition-all duration-300">
+                            <span class="material-symbols-outlined text-xl">chat</span>
+                            اطلب عبر واتساب
+                        </button>
+                    </div>
+
+                    <div class="pt-6 border-t border-outline-variant/15 flex justify-between items-center text-[10px] font-label uppercase tracking-widest text-outline">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">inventory_2</span>
+                            رمز المنتج: FLOR-BR-092
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                            مشاركة
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bento Section: Related or Why Us -->
+        <section class="mt-32">
+            <h2 class="text-3xl font-headline italic text-on-surface mb-12 text-center">مختارات لك</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2 bg-secondary-container/20 rounded-2xl p-8 flex flex-col justify-end min-h-[300px] relative overflow-hidden group">
+                    <div class="z-10">
+                        <h3 class="text-2xl font-headline text-secondary mb-2">مجموعة الأوركيد</h3>
+                        <p class="text-on-secondary-container/80 text-sm max-w-xs">تنسيقات بسيطة وراقية للمساحات العصرية.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1566333306171-7f49927115a6?auto=format&fit=crop&q=80&w=600" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="md:col-span-1 bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/10 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">local_shipping</span>
+                    <h3 class="text-lg font-headline mb-2">توصيل في نفس اليوم</h3>
+                    <p class="text-xs text-on-surface-variant font-body">اطلب قبل الساعة 12 ظهراً لضمان التوصيل في نفس اليوم لجميع مدن المملكة.</p>
+                </div>
+                <div class="md:col-span-1 bg-primary-container/20 rounded-2xl p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">card_giftcard</span>
+                    <h3 class="text-lg font-headline mb-2">هدايا مخصصة</h3>
+                    <p class="text-xs text-on-surface-variant font-body">أضف ملاحظة مكتوبة بخط اليد على بطاقاتنا القطنية الحرفية المميزة.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#f4f4f0] dark:bg-stone-950 w-full py-12 px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="col-span-2 md:col-span-1">
+                <div class="font-serif italic text-xl text-[#7b5556] mb-4">المتجر الرقمي للزهور</div>
+                <p class="font-sans text-xs tracking-tight text-[#56634f] opacity-70">© 2024 المتجر الرقمي للزهور. صُنع بكل حب.</p>
+            </div>
+            <div>
+                <h4 class="font-label text-[10px] uppercase tracking-widest text-[#7b5556] mb-4">التجربة</h4>
+                <div class="flex flex-col space-y-2">
+                    <a href="#" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">من نحن</a>
+                    <a href="#" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">العناية بالزهور</a>
+                    <a href="#" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">انستغرام</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label text-[10px] uppercase tracking-widest text-[#7b5556] mb-4">الخدمة</h4>
+                <div class="flex flex-col space-y-2">
+                    <a href="#" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">سياسة الشحن</a>
+                    <a href="#" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">الخصوصية</a>
+                    <a href="HomePage.html#footer" class="font-sans text-xs opacity-70 hover:opacity-100 transition-opacity">اتصل بنا</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-label text-[10px] uppercase tracking-widest text-[#7b5556] mb-4">النشرة البريدية</h4>
+                <div class="flex">
+                    <input type="email" placeholder="انضم إلينا..." class="bg-surface w-full border-none rounded-r-lg text-xs font-label focus:ring-1 focus:ring-primary p-2">
+                    <button class="bg-primary text-on-primary px-4 rounded-l-lg hover:bg-primary-dim transition-colors">
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom NavBar -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-3 bg-[#faf9f6]/90 dark:bg-stone-900/90 backdrop-blur-lg shadow-[0_-10px_30px_rgba(48,51,48,0.08)] rounded-t-3xl text-sm">
+        <a href="HomePage.html" class="flex flex-col items-center justify-center text-[#303330] dark:text-[#eeeeea] active:scale-95 transition-transform">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-sans uppercase tracking-widest mt-1">الرئيسية</span>
+        </a>
+        <a href="CategoryPage.html" class="flex flex-col items-center justify-center bg-[#f7c5c5] dark:bg-[#7b5556] text-[#7b5556] dark:text-[#ffffff] rounded-2xl p-2 active:scale-95 transition-transform">
+            <span class="material-symbols-outlined">styler</span>
+            <span class="text-[10px] font-sans uppercase tracking-widest mt-1">تسوق</span>
+        </a>
+        <a href="CartPage.html" class="flex flex-col items-center justify-center text-[#303330] dark:text-[#eeeeea] active:scale-95 transition-transform">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span class="text-[10px] font-sans uppercase tracking-widest mt-1">السلة</span>
+        </a>
+        <a href="AdminDashBoard.html" class="flex flex-col items-center justify-center text-[#303330] dark:text-[#eeeeea] active:scale-95 transition-transform">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-sans uppercase tracking-widest mt-1">حسابي</span>
+        </a>
+    </nav>
+
+</body>
+</html>
